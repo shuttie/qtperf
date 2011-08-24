@@ -74,27 +74,27 @@ float MainWindow::runTest(int testnum) {
 	break;
     case 9:
 	result = test_textedit_add(tests);
-	line = QString("QTextEdit - Add text - %1 s").arg(result);
+	line = QString("QTextEdit add text - %1 s").arg(result);
 	break;
     case 10:
 	result = test_textedit_scroll(tests);
-	line = QString("QTextEdit - Scroll - %1 s").arg(result);
+	line = QString("QTextEdit scroll - %1 s").arg(result);
 	break;
     case 11:
 	result = test_qpainter_lines(tests);
-	line = QString("QPainter - Lines - %1 s").arg(result);
+	line = QString("QPainter lines - %1 s").arg(result);
 	break;
     case 12:
 	result = test_qpainter_circles(tests);
-	line = QString("QPainter - Circles - %1 s").arg(result);
+	line = QString("QPainter circles - %1 s").arg(result);
 	break;
     case 13:
 	result = test_qpainter_text(tests);
-	line = QString("QPainter - Text - %1 s").arg(result);
+	line = QString("QPainter text - %1 s").arg(result);
 	break;
     case 14:
 	result = test_qpainter_image(tests);
-	line = QString("QPainter - Pixmap - %1 s").arg(result);
+	line = QString("QPainter pixmap - %1 s").arg(result);
 	break;
     default:
 	// what?
