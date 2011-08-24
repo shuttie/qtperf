@@ -42,59 +42,59 @@ float MainWindow::runTest(int testnum) {
     switch (testnum) {
     case 1:
 	result = test_lineedit(tests);
-	line = QString("QLineEdit - %1 ms").arg(result);
+	line = QString("QLineEdit - %1 s").arg(result);
 	break;
     case 2:
 	result = test_combobox(tests);
-	line = QString("QComboBox - %1 ms").arg(result);
+	line = QString("QComboBox - %1 s").arg(result);
 	break;
     case 3:
 	result = test_comboboxentry(tests);
-	line = QString("QComboBoxEntry - %1 ms").arg(result);
+	line = QString("QComboBoxEntry - %1 s").arg(result);
 	break;
     case 4:
 	result = test_spinbox(tests);
-	line = QString("QSpinBox - %1 ms").arg(result);
+	line = QString("QSpinBox - %1 s").arg(result);
 	break;
     case 5:
 	result = test_progressbar(tests);
-	line = QString("QProgressBar - %1 ms").arg(result);
+	line = QString("QProgressBar - %1 s").arg(result);
 	break;
     case 6:
 	result = test_pushbutton(tests);
-	line = QString("QPushButton - %1 ms").arg(result);
+	line = QString("QPushButton - %1 s").arg(result);
 	break;
     case 7:
 	result = test_checkbox(tests);
-	line = QString("QCheckbox - %1 ms").arg(result);
+	line = QString("QCheckbox - %1 s").arg(result);
 	break;
     case 8:
 	result = test_radiobutton(tests);
-	line = QString("QRadioButton - %1 ms").arg(result);
+	line = QString("QRadioButton - %1 s").arg(result);
 	break;
     case 9:
 	result = test_textedit_add(tests);
-	line = QString("QTextArea - Add text - %1 ms").arg(result);
+	line = QString("QTextArea - Add text - %1 s").arg(result);
 	break;
     case 10:
 	result = test_textedit_scroll(tests);
-	line = QString("QTextEdit - Scroll - %1 ms").arg(result);
+	line = QString("QTextEdit - Scroll - %1 s").arg(result);
 	break;
     case 11:
 	result = test_qpainter_lines(tests);
-	line = QString("QPainter - Lines - %1 ms").arg(result);
+	line = QString("QPainter - Lines - %1 s").arg(result);
 	break;
     case 12:
 	result = test_qpainter_circles(tests);
-	line = QString("QPainter - Circles - %1 ms").arg(result);
+	line = QString("QPainter - Circles - %1 s").arg(result);
 	break;
     case 13:
 	result = test_qpainter_text(tests);
-	line = QString("QPainter - Text - %1 ms").arg(result);
+	line = QString("QPainter - Text - %1 s").arg(result);
 	break;
     case 14:
 	result = test_qpainter_image(tests);
-	line = QString("QPainter - Pixmap - %1 ms").arg(result);
+	line = QString("QPainter - Pixmap - %1 s").arg(result);
 	break;
     default:
 	// what?
