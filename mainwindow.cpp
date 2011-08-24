@@ -29,8 +29,8 @@ void MainWindow::runButtonPressed() {
 	float all = 0;
 	for (int i=1; i<=14; ++i)
 	    all += runTest(i);
-	printf("Total: %f ms\n\n", all);
-	ui->textConsole->append(QString("Total: %1 ms").arg(all));
+	printf("Total: %f s\n\n", all);
+	ui->textConsole->append(QString("Total: %1 s").arg(all));
     }
     ui->tabMain->setCurrentIndex(0);
 }
