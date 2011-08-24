@@ -17,6 +17,7 @@ public:
     typedef enum {TEST_LINES, TEST_CIRCLES, TEST_TEXT, TEST_PIXMAP, TEST_IDLE} TestType;
     TestType type;
     explicit TestWidget(QWidget *parent = 0);
+    void setType(TestType newtype);
     ~TestWidget();
 protected:
     void paintEvent(QPaintEvent *);

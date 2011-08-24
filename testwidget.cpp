@@ -47,3 +47,9 @@ void TestWidget::paintEvent(QPaintEvent *) {
     }
     painter.end();
 }
+
+void TestWidget::setType(TestType newtype) {
+    type = TEST_IDLE;
+    repaint();
+    type = newtype;
+}

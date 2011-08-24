@@ -18,6 +18,7 @@ MainWindow::~MainWindow()
 void MainWindow::resetButtonPressed() {
     ui->spinRounds->setValue(100);
     ui->comboTests->setCurrentIndex(0);
+    ui->textConsole->clear();
 }
 
 void MainWindow::runButtonPressed() {
@@ -31,6 +32,7 @@ void MainWindow::runButtonPressed() {
 	printf("Total: %f ms", all);
 	ui->textConsole->append(QString("Total: %1 ms").arg(all));
     }
+    ui->tabMain->setCurrentIndex(0);
 }
 
 float MainWindow::runTest(int testnum) {
@@ -253,7 +255,7 @@ float MainWindow::test_textedit_scroll(int count) {
 float MainWindow::test_qpainter_lines(int count) {
     ui->tabMain->setCurrentIndex(4);
     QTime start = QTime::currentTime();
-    ui->testDrawWidget->type = TestWidget::TEST_LINES;
+    ui->testDrawWidget->setType(TestWidget::TEST_LINES);
     for (int i=0; i<count*1000; ++i) {
 	ui->testDrawWidget->repaint();
     }
@@ -264,7 +266,7 @@ float MainWindow::test_qpainter_lines(int count) {
 float MainWindow::test_qpainter_circles(int count) {
     ui->tabMain->setCurrentIndex(4);
     QTime start = QTime::currentTime();
-    ui->testDrawWidget->type = TestWidget::TEST_CIRCLES;
+    ui->testDrawWidget->setType(TestWidget::TEST_CIRCLES);
     for (int i=0; i<count*1000; ++i) {
 	ui->testDrawWidget->repaint();
     }
@@ -275,7 +277,7 @@ float MainWindow::test_qpainter_circles(int count) {
 float MainWindow::test_qpainter_text(int count) {
     ui->tabMain->setCurrentIndex(4);
     QTime start = QTime::currentTime();
-    ui->testDrawWidget->type = TestWidget::TEST_TEXT;
+    ui->testDrawWidget->setType(TestWidget::TEST_TEXT);
     for (int i=0; i<count*100; ++i) {
 	ui->testDrawWidget->repaint();
     }
@@ -286,7 +288,7 @@ float MainWindow::test_qpainter_text(int count) {
 float MainWindow::test_qpainter_image(int count) {
     ui->tabMain->setCurrentIndex(4);
     QTime start = QTime::currentTime();
-    ui->testDrawWidget->type = TestWidget::TEST_PIXMAP;
+    ui->testDrawWidget->setType(TestWidget::TEST_PIXMAP);
     for (int i=0; i<count*10; ++i) {
 	ui->testDrawWidget->repaint();
     }
