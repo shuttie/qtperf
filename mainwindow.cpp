@@ -74,7 +74,7 @@ float MainWindow::runTest(int testnum) {
 	break;
     case 9:
 	result = test_textedit_add(tests);
-	line = QString("QTextArea - Add text - %1 s").arg(result);
+	line = QString("QTextEdit - Add text - %1 s").arg(result);
 	break;
     case 10:
 	result = test_textedit_scroll(tests);
