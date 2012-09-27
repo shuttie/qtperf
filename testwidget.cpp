@@ -10,7 +10,6 @@ TestWidget::TestWidget(QWidget *parent) :
     this->setAttribute(Qt::WA_NoBackground);
     this->setAttribute(Qt::WA_NoSystemBackground);
     duck.load(":/pixmaps/duck.png", "PNG");
-    colorNames = QColor::colorNames();
 }
 
 TestWidget::~TestWidget()
@@ -24,7 +23,7 @@ void TestWidget::paintEvent(QPaintEvent *) {
     int w = this->width();
     int h = this->height();
     int s = 60;
-    QColor color(colorNames.at(qrand() % colorNames.count()));
+    QColor color = randomColor();
     painter.setPen(color);
     painter.setBrush(QBrush(color));
     painter.setFont(QFont("Arial",16,QFont::Bold));
@@ -47,6 +46,11 @@ void TestWidget::paintEvent(QPaintEvent *) {
 	painter.drawRect(0,0,w,h);
     }
     painter.end();
+}
+
+QColor TestWidget::randomColor()
+{
+    return QColor(qrand() % 255, qrand() % 255, qrand() % 255);
 }
 
 void TestWidget::setType(TestType newtype) {
