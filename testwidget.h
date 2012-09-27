@@ -23,6 +23,7 @@ protected:
     void paintEvent(QPaintEvent *);
 
 private:
+    QStringList colorNames;
     QPixmap duck;
     Ui::TestWidget *ui;
 };
