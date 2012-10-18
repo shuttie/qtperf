@@ -10,3 +10,5 @@ Qtperf can be used to test performance of:
 * Qt themes;
 * QtGui library itself (to compare perfomance of different Qt versions);
 * Xorg and it's video driver.
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/2b2de99e302d302983590c72d9078619 "githalytics.com")](http://githalytics.com/shuttie/qtperf)
